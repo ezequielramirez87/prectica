@@ -1,0 +1,271 @@
+/* ------------------------- */
+/* Estilos Generales */
+/* ------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+body { 
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.texto-naranja {
+    font-weight: 300;
+    color: orange;
+}
+
+.texto-blanco {
+    font-weight: 700;
+    color: #fff;
+}
+
+.texto-negro {
+	color: #000;
+}
+/*clases de full page*/
+#fp-nav ul li a span{
+    background: orange;
+}
+#fp-nav ul li .fp-tooltip{
+    color: white;
+}
+/*menu de navegacion*/
+.nav{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 50;
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+}
+.nav li, .nav a{
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald' , sans-serif;
+    font-size: 19px;
+    color: white;
+    transition: 0.5s ease;
+    text-shadow:5px 5px rgba(100, 100, 100, 0.5);
+}
+.nav li.active {
+    border: 2px solid orange;
+}
+#menu li a{
+    transition: 0.5s ease; 
+}
+.menu li.active a,
+.menu li a:hover {
+    font-size: 30px;
+}
+#logo{
+    font-size: 70px;
+    font-family: 'Liu Jian Mao Cao', cursive;
+    text-shadow:5px 5px orange, 10px 10px orangered;
+}
+/*header*/
+.header{
+    background:url("../img/bg-imagen.jpeg");
+    background-position: center;
+}
+.header .contenedor-titulo{
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+.titulo{
+    font-size: 70px;
+    text-transform: uppercase;
+}
+.contenedor-icono{
+    position: absolute;
+    z-index: 99;
+    font-size: 70px;
+    bottom: 3%;
+    left: 50%;
+    animation: saltar 1s ease infinite;
+}
+.titulo-video{
+    font-size: 70px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: 99;
+}
+.bg-video{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background: #000;
+    background-position: center;
+    background-size: contain;
+    object-fit: cover;
+}
+/*Animacion*/
+@keyframes saltar{
+    0%{transform: translateY(20px);}
+    25%{transform: translateY(0px);}
+    100%{transform: translateY(20px);}
+}
+/*productos*/
+.productos .slide .informacionProducto::before{
+    content: "";
+    height: 140px;
+    width: 2px;
+    display: inline-block;
+    background: orange;
+    position: absolute;
+    top: 45%;
+    margin: -10px;
+}
+.productos article{
+    background-position: center;
+    background-size: cover;    
+}
+.productos article:nth-child(1){
+    background-image: url('../img/producto-01.jpg');
+}
+.productos article:nth-child(2){
+    background-image: url('../img/producto-02.jpg');
+}
+.productos article:nth-child(3){
+    background-image: url('../img/producto-03.jpg');
+}
+.productos article:nth-child(4){
+    background-image: url('../img/producto-04.jpg');
+}
+.productos article:nth-child(5){
+    background-image: url('../img/producto-05.jpg');
+}
+.productos .slide .informacionProducto{
+    margin: 0 30px;
+}
+.productos .modelo{
+    font-size: 45px;
+}
+.descripcion{
+    width: 25%;
+}
+.precio{
+    font-size: 50px;
+}
+.precio::before{
+    content: "$";
+    display: inline-block;
+}
+/*clases de full page , flechas*/
+.fp-controlArrow.fp-prev{
+    top: 95%;
+    border-width: 20px 20px 20px 0px;
+    border-color: transparent black transparent transparent;
+    left: 80%;
+}
+.fp-controlArrow.fp-next{
+    top: 95%;
+    border-width: 20px 0px 20px 20px;
+    border-color: transparent transparent transparent black;
+}
+/*footer*/
+footer{
+    background: #000;
+}
+footer .texto-naranja{
+    text-transform: uppercase;
+    font-size: 70px;
+    letter-spacing: 2px;
+}
+footer h2{
+    opacity: 0;
+    font-family: 'oswald', sans-serif;
+    transition: 1s ease all;
+    padding-bottom: 20px;
+}
+footer .redes{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 50px;
+}
+footer .redes a{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    text-decoration:none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 20px 0 20px;
+}
+footer .facebook i{color: #3b5998; transition: 0.5s}
+footer .twitter i{color: #1da1f2; transition: 0.5s}
+footer .instagram i{color: #c13584; transition: 0.5s}
+
+footer .facebook:hover{background: #3b5998;}
+footer .twitter:hover{background: #1da1f2;}
+footer .instagram:hover{background: #c13584;}
+
+footer .facebook:hover i{color: #fff;}
+footer .twitter:hover i{color: #fff;}
+footer .instagram:hover i{color: #fff;}
+/*media queries*/
+@media screen and (max-width:780px){
+        .nav li{
+            display: flex;
+        }
+        .menu li a{
+            font-size: 15px;
+        }
+        .menu li.active a,
+        .menu li a:hover {
+            font-size: 20px;
+        }
+        .titulo{
+            font-size: 50px;
+        }
+        body{
+            font-size: 12px;
+        }
+        .productos .modelo{
+            font-size: 30px;
+        }
+        .precio{
+            font-size: 25px;
+        }
+        .titulo-video{
+            font-size: 50px;
+        }
+        #logo{
+            font-size: 50px;
+        }
+        footer .texto-naranja{
+            font-size: 50px;
+        }
+        footer .redes{
+            font-size: 30px;
+        }
+        footer .redes a{
+            width: 60px;
+            height: 60px;
+            margin: 0 20px 0 20px;
+        }
+        #fp-nav ul li a span{
+            display: none;
+        }
+}   
